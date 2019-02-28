@@ -11,7 +11,7 @@ submission_url = 'http://codeforces.com/contest/{contest_id}/submission/{submiss
 response = requests.get('http://codeforces.com/api/user.status?handle={}&from=1&count=10000'.format(handle)).json()
 
 if response['status'] != 'OK':
-	print('A problem ocurred. Please, try again in a moment...')
+	print('A problem has ocurred. Please, try again in a moment...')
 
 if not os.path.exists(handle):
     os.makedirs(handle)
